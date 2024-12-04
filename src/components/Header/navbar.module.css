@@ -1,0 +1,158 @@
+/* Basic styling for the navbar */
+.nav {
+  width: 100%;
+  background-color: #360B6E;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 90px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Adjust logo container */
+.pic {
+  display: flex;
+  width: 8%;
+  height: 50px;
+  gap: 0; /* No gap between the images */
+}
+
+/* Desktop Menu */
+.desktopMenu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.desktopMenu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Styling for the buttons (Home, About, Contact) */
+.desktopMenu li {
+  list-style: none;
+}
+
+.desktopMenu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.desktopMenu a:hover {
+color:rgb(245, 73, 216);  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Download Button Styling */
+.button {
+  background: linear-gradient(135deg, #5C22B0, #360B6E); /* Gradient effect */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: none; /* Hide the button by default */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for Download button */
+.button:hover {
+  background: linear-gradient(135deg, #360B6E, #cac6d1,#360B6E); /* Reverse gradient on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Hamburger menu icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobile menu styling */
+.mobileMenu {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: #360B6E;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 999;
+}
+
+.mobileMenu.show {
+  display: flex !important; /* Show menu when 'show' class is added */
+}
+
+.mobileMenu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Small screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .pic {
+    display: flex;
+    width: 20%;
+    height: 50px;
+    gap: 10px;
+  }
+  
+  /* Desktop Menu */
+  .desktopMenu {
+    display: none; /* Hide desktop menu on mobile */
+  }
+
+  /* Hamburger icon */
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+
+  /* Show mobile menu when toggled */
+  .mobileMenu.show {
+    display: flex !important;
+  }
+
+  /* Show the 'Download Now' button in the mobile menu */
+  .mobileMenu button {
+    display: block;
+    margin-top: 20px; /* Optional margin to space it out */
+  }
+
+  /* Button styles for mobile */
+  .button {
+    display: none; /* Hide the button outside of mobile menu */
+  }
+}
+
+/* Medium and Large screens (min-width: 769px) */
+@media (min-width: 769px) {
+  .button {
+    display: block; /* Show the button on larger screens */
+  }
+
+  .mobileMenu {
+    display: none; /* Hide mobile menu */
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger icon on larger screens */
+  }
+}

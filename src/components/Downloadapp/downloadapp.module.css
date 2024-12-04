@@ -1,0 +1,148 @@
+/* Main styles */
+.main {
+    background-color: white;
+    width: 100%;
+}
+
+/* Content container */
+.content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Heading styles */
+.main h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Paragraph styles */
+.main p {
+    text-align: center;
+    color: #555;
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Media Queries for responsive design */
+
+/* For Extra Small Screens (Mobile Portrait) */
+@media (max-width: 480px) {
+    .content {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .main h1 {
+        font-size: 1.8rem;
+    }
+
+    .main p {
+        font-size: 0.9rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .buttons button {
+        margin-bottom: 10px;
+    }
+}
+
+/* For Small Screens (Mobile Landscape / Tablet Portrait) */
+@media (max-width: 768px) {
+    .content {
+        width: 85%;
+        padding: 25px;
+    }
+
+    .main h1 {
+        font-size: 2rem;
+    }
+
+    .main p {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+/* For Medium Screens (Tablet Landscape / Small Laptops) */
+@media (max-width: 1024px) {
+    .content {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .main h1 {
+        font-size: 2.5rem;
+    }
+
+    .main p {
+        font-size: 1.1rem;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* For Large Screens (Desktop and above) - No change needed as per your request */
+@media (min-width: 1025px) {
+    .content {
+        width: 80%;
+        padding: 30px 40px;
+    }
+
+    .main h1 {
+        font-size: 3rem;
+    }
+
+    .main p {
+        font-size: 1.2rem;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* For Extra Large Screens (Large Desktops) */
+@media (min-width: 1440px) {
+    .content {
+        width: 70%;
+        padding: 40px 50px;
+    }
+
+    .main h1 {
+        font-size: 3.5rem;
+    }
+
+    .main p {
+        font-size: 1.3rem;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}

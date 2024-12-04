@@ -1,0 +1,220 @@
+.section {
+    position: relative;
+    background-image: url('/herobg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 90px;
+}
+
+/* Overlay styling */
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    padding: 20px;
+}
+
+.maindiv {
+    width: 100%;
+    height: auto;
+}
+
+.headingfirst {
+    font-size: 40px;
+    color: #FFFFFF;
+    word-spacing: 0%;
+    text-transform: capitalize;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: normal;
+}
+
+.para {
+    font-size: small;
+    color: #FFFFFF;
+    margin-top: 15px;
+}
+
+.custombutton {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Default button styles */
+.custombutton1, .custombutton2 {
+    width: 161px;
+    height: 60px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease; /* Smooth transition for background change */
+}
+
+/* Gradient background for custombutton1 */
+.custombutton1 {
+    background: linear-gradient(45deg, #5C22B0, #360B6E); /* Purple to Dark Purple gradient */
+}
+
+/* Gradient background for custombutton2 */
+.custombutton2 {
+    background: linear-gradient(45deg, #090f5f, #5C22B0); /* Pink to Purple gradient */
+}
+
+/* Hover effects for both buttons */
+.custombutton1:hover, .custombutton2:hover {
+    background: linear-gradient(45deg, #360B6E, #5C22B0); /* Hover gradient */
+}
+
+
+.herosection2 {
+    position: relative;
+    width: 50%;
+    min-height: 100vh;
+    background-image: url('/heromobile.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Extra large screens (desktops and larger, 1200px and above) */
+@media (min-width: 1200px) {
+    .section {
+        padding: 0px 100px; /* Increased padding for larger screens */
+    }
+    .headingfirst {
+        font-size: 48px; /* Larger font for extra-large screens */
+    }
+}
+
+/* Large screens (laptops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .section {
+        padding: 0px 80px;
+    }
+    .headingfirst {
+        font-size: 40px; /* Adjusted font for large screens */
+    }
+}
+
+/* Medium screens (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .para {
+        font-size: medium;
+        color: #FFFFFF;
+        /* margin-top: 100px; */
+    }
+    
+    .maindiv {
+        width: 100%;
+        height: auto;
+        margin-top: 180px;
+    }
+    
+    .section {
+        flex-direction: column;
+        padding: 0 40px;
+    }
+    .content-wrapper, .herosection2 {
+        width: 100%; /* Full width on medium screens */
+        min-height: 60vh;
+    }
+    .headingfirst {
+        font-size: 32px; /* Slightly smaller font on medium screens */
+    }
+    .custombutton1, .custombutton2 {
+        width: 140px;
+        height: 50px;
+    }
+}
+
+/* Small screens (mobile, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .section {
+        padding: 0 30px;
+    }
+    .headingfirst {
+        font-size: 28px;
+    }
+    .para {
+        font-size: 14px;
+    }
+    .custombutton1, .custombutton2 {
+        width: 130px;
+        height: 45px;
+    }
+    .herosection2{
+        width: 100%;
+        height: 100%;
+        background-size: cover; /* Increase the image size to cover the section */
+        background-position: center; /* Ensure the image is centered */
+    }
+}
+
+/* Extra small screens (small mobile devices, less than 576px) */
+@media (max-width: 575px) {
+    .herosection2 {
+        width: 100%;
+        height: auto;
+        background-size: contain; /* Make sure the image scales properly */
+        background-position: center;
+    }
+
+    .section {
+        padding: 0 20px;
+        flex-direction: column;
+    }
+
+    .content-wrapper, .herosection2 {
+        width: 100%;
+        min-height: 50vh;
+    }
+
+    .headingfirst {
+        font-size: 30px;
+        margin-top: 70px; /* Move the heading down */
+    }
+
+    .para {
+        font-size: 14px;
+    }
+
+    .custombutton {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .custombutton1, .custombutton2 {
+        width: 100%; /* Full-width buttons */
+        height: 50px;
+    }
+    .herosection2{
+        width: 100%;
+        height: 100%;
+        background-size: cover; /* Increase the image size to cover the section */
+        background-position: center; /* Ensure the image is centered */
+    }
+}

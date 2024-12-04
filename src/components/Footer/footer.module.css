@@ -1,0 +1,302 @@
+.main {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.section1 {
+    width: 100%;
+    height: 50px;
+    background-color: #360B6E;
+    padding: 10px 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    gap: 10px; /* Reduce the gap between logos */
+}
+
+.pic {
+    display: flex;
+    height: 50px;
+    gap: 10px; /* Reduced gap between icons */
+    align-items: center;
+}
+
+/* Reduce size of logos */
+.logo img {
+    width: 40px; /* Reduced width */
+    height: 40px; /* Reduced height */
+}
+
+/* Increase size of icons */
+.pic svg {
+    font-size: 30px; /* Increase icon size */
+    color: white; /* Icon color */
+}
+
+.dev1 {
+    display: flex;
+    gap: 15%;
+}
+
+.dev1 h1 {
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.dev1 p {
+    font-size: small;
+    margin-top: 9px;
+    color: #555;
+}
+
+.about {
+    margin-top: 60px;
+}
+
+.about h1 {
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.about p {
+    font-size: small;
+    margin-top: 9px;
+    color: #555;
+}
+
+.section2 {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    padding: 0px 90px 10px 90px;
+    flex-direction: row; /* Default for large screens */
+}
+
+.content {
+    gap: 30px;
+}
+
+.content h1 {
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.content p {
+    font-size: small;
+    margin-top: 9px;
+    color: #555;
+}
+
+.content1 {
+    width: 60%;
+    min-height: 500px;
+    padding: 80px 20px 20px 40px;
+}
+
+.content2 {
+    width: 40%;
+    min-height: 500px;
+    padding: 80px 20px 20px 40px;
+}
+
+.sectwo {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    color: #555;
+
+}
+
+.timing {
+    color: #555;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.customcss{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    text-wrap: wrap;
+}
+.contactcustom{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.icon{
+    font-size: x-large;
+}
+.num{
+    text-wrap: nowrap;
+    font-size: small;
+}
+.num1{
+    text-wrap: wrap;
+    font-size: small;
+}
+/* Media Queries */
+
+/* Extra Small Devices (max-width: 576px) */
+@media (max-width: 576px) {
+    .logo img {
+        width: 20px; /* Reduced width */
+        height: 20px; /* Reduced height */
+    }
+    .section1{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 0px 25px 0px 25px;
+    }
+    .section1 logo{
+        font-size: 20px;
+
+    }
+   
+    
+    .customcss{
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+    .div1{
+        gap: 0px;
+    }
+    .div1 h1{
+        text-wrap: nowrap;
+    }
+    .div1 p{
+        font-size: x-small;
+    }
+    .contactcustom{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 3px;
+    }
+    .num{
+        font-size: x-small;
+    }
+    .num1{
+        text-wrap: nowrap;
+        font-size: x-small;
+    }
+  
+    .section2 {
+        flex-direction: column; /* Switch to column layout */
+       padding: 0px 0px 0px 0px;
+    }
+.content1,
+    .content2 {
+        width: 100%; /* Take full width */
+        gap: 5px;
+    }
+
+    .sectwo {
+        flex-direction: column; /* Stack elements */
+        gap: 20px;
+    }
+
+    .contact {
+        flex-direction: column; /* Stack contact information */
+        gap: 20px;
+    }
+}
+
+/* Small Devices (min-width: 577px and max-width: 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+   
+
+    .section1{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .section1 logo{
+        font-size: 20px;
+
+    }
+    .customcss{
+
+        display: flex;
+        flex-direction: column;
+    }
+    .section2 {
+        flex-direction: column; /* Switch to column layout */
+        padding: 0px 0px 0px 0px;
+    }
+    .contactcustom{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .content1,
+    .content2 {
+        width: 100%; /* Take full width */
+    }
+
+    .sectwo {
+        flex-direction: column; /* Stack elements */
+        gap: 30px;
+    }
+
+    .contact {
+        flex-direction: column; /* Stack contact information */
+        gap: 20px;
+    }
+}
+
+/* Medium Devices (min-width: 769px and max-width: 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .section2 {
+        flex-direction: column; /* Switch to column layout */
+    }
+
+    .content1,
+    .content2 {
+        width: 100%; /* Take full width */
+    }
+
+    .sectwo {
+        flex-direction: column; /* Stack elements */
+        gap: 30px;
+    }
+
+    .contact {
+        flex-direction: column; /* Stack contact information */
+        gap: 20px;
+    }
+}
+
+/* Large Devices (min-width: 993px) */
+@media (min-width: 993px) {
+    /* No changes for large screens */
+}

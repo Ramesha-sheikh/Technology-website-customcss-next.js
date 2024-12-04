@@ -1,0 +1,162 @@
+/* Container for all cards */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+/* Fixed content section */
+.content {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10% 0px 0px 0px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.content p {
+    font-size: small;
+    color: #fafafa;
+}
+
+/* Main section containing the cards */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Style for each card */
+.cardcontainer {
+    flex-basis: 20%;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(228, 225, 225, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+.cardcontainer:hover {
+    transform: translateY(-10px);
+    border: 2px solid #FFFFFf;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Heading styling */
+.cardcontainer h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: Oswald;
+    color: #B82CB4;
+    font-family: Impact, Haettenschweiler, sans-serif;
+}
+
+.cardcontainer h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-family: Oswald;
+    color: #ffff;
+    font-family: Impact, Haettenschweiler, sans-serif;
+}
+
+/* Paragraph text styling */
+.cardcontainer p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Media Queries */
+
+/* Extra small devices (mobile phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+    .content {
+        width: 90%; /* Make the content take up more width on small screens */
+    }
+
+    .cardcontainer {
+        flex-basis: 70%; /* Full-width cards on extra-small screens */
+        padding: 20px;
+    }
+
+  
+    .content h1 {
+        font-size: 2rem; /* Reduce font size for small screens */
+    }
+
+    .content p {
+        font-size: 0.9rem; /* Reduce paragraph font size */
+    }
+}
+
+/* Small devices (tablets, 600px to 768px) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .content {
+        width: 80%; /* Content slightly smaller on small tablets */
+    }
+
+    .cardcontainer {
+        flex-basis: 70%; /* Full-width cards on small tablets */
+        padding: 30px;
+    }
+
+   
+
+    .content h1 {
+        font-size: 2.5rem; /* Adjust heading font size */
+    }
+
+    .content p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+}
+
+/* Medium devices (larger tablets or small laptops, 768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .content {
+        width: 70%; /* Slightly smaller content width */
+    }
+
+    .cardcontainer {
+        flex-basis: 40%; /* Two cards per row on medium screens */
+        padding: 35px;
+    }
+
+    .picture img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .content h1 {
+        font-size: 2.8rem; /* Adjust heading font size */
+    }
+
+    .content p {
+        font-size: 1.1rem; /* Adjust paragraph font size */
+    }
+}
+
+/* Large screens: No change (keeps the original styles) */
+@media only screen and (min-width: 1024px) {
+    .cardcontainer {
+        flex-basis: 20%; /* Four cards per row on large screens */
+        padding: 40px;
+    }
+
+    .content h1 {
+        font-size: 3rem; /* Heading remains large */
+    }
+
+    .content p {
+        font-size: 1.2rem; /* Slightly larger paragraph font size */
+    }
+}

@@ -1,0 +1,131 @@
+/* Container for all cards */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #101417;
+}
+
+/* Fixed content section */
+.content {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10% 0px 0px 0px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #FFFFFF;
+}
+
+.content p {
+    font-size: small;
+    color: #FFFFFF;
+}
+
+/* Main section containing the cards */
+.main {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.cardcontainer {
+    flex-basis: 26%; /* Ensures equal width for all cards */
+max-height:450px;    
+border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 30px 40px 30px;
+    box-shadow: 0 4px 6px rgba(233, 227, 227, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the card */
+.cardcontainer:hover {
+    transform: translateY(-10px);
+}
+
+/* Heading styling */
+.cardcontainer h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    font-family: Impact, Haettenschweiler, sans-serif;
+}
+
+/* Paragraph text styling */
+.cardcontainer p {
+    font-size: 1rem;
+    color: #FFFFFF;
+    text-align: center;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+
+}
+
+/* Different background colors for each card */
+.main .cardcontainer:nth-child(1) {
+    background-color: #B82CB4; /* Light red */
+}
+
+.main .cardcontainer:nth-child(2) {
+    background-color: #5C22B0; /* Light green */
+}
+
+.main .cardcontainer:nth-child(3) {
+    background-color: #360B6E; /* Light blue */
+}
+
+/* Button styling */
+.cardcontainer button {
+    background-color: #FFFFFF;
+    color: black;
+    border: none;
+    margin: 0 auto; /* Centers the button */
+    padding: 10px 20px; /* Adjusts button padding */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center; /* Centers text in the button */
+    display: block;
+    width: fit-content; /* Ensures the button adjusts to text width */
+}
+
+/* Media Queries */
+
+/* Extra small devices (mobile phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+    .cardcontainer {
+        flex-basis: 100%;
+        max-width: 60%; /* Ensures full width on small devices */
+        padding: 30px;
+    }
+}
+
+/* Small devices (tablets, 600px to 768px) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .cardcontainer {
+        flex-basis: 100%;
+        padding: 30px;
+        max-width: 60%;
+    }
+}
+
+/* Medium devices (larger tablets or small laptops, 768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .cardcontainer {
+        flex-basis: 40%;
+        padding: 35px;
+    }
+}

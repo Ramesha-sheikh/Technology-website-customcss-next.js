@@ -1,0 +1,140 @@
+/* Container styles */
+.container {
+  display: flex; /* Change from column to row */
+  flex-direction: row; /* Arrange items in a row */
+  justify-content: space-between; /* Space between image and form */
+  align-items: center; /* Center align items vertically */
+  gap: 20px;
+  width: 100%;
+  padding: 60px 90px; /* Adjust padding for larger screens */
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Image styling */
+.imageWrapper {
+  flex: 1; /* Allow image to take equal space */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form container styles */
+.form {
+  flex: 1; /* Allow form to take equal space */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+
+/* Input and textarea styling */
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #B82CB4;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+.textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Button styling */
+.button {
+  padding: 8px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablet) */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column; /* Stack the items vertically on tablets */
+    padding: 40px 20px; /* Adjust padding */
+  }
+
+  .imageWrapper,
+  .form {
+    width: 100%; /* Ensure image and form take full width */
+    margin-bottom: 20px; /* Add space between image and form */
+  }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .imageWrapper,
+  .form {
+    width: 100%;
+    margin-bottom: 20px; /* Add space between image and form */
+  }
+
+  .label {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+
+  .input,
+  .textarea {
+    font-size: 12px; /* Adjust input font size */
+  }
+
+  .button {
+    font-size: 14px; /* Adjust button font size */
+    padding: 10px 20px; /* Adjust button padding */
+  }
+}
+
+/* Extra Small Screens (Very Small Mobile) */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 10px; /* Adjust padding further for very small screens */
+  }
+
+  .label {
+    font-size: 10px; /* Adjust label font size */
+  }
+
+  .input,
+  .textarea {
+    font-size: 10px; /* Adjust input font size */
+  }
+
+  .button {
+    font-size: 12px; /* Adjust button font size */
+    padding: 8px 16px; /* Adjust button padding */
+  }
+}

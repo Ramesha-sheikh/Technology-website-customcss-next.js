@@ -1,0 +1,137 @@
+/* employe.module.css */
+
+.container {
+    width: 100%;
+    background-color: black;
+    min-height: 900px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    padding-top: 60px;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center; /* Center vertically */
+  }
+  
+  .container .pic {
+    width: 50%; /* Set a fixed width to center it */
+    height: 700px; /* Set height based on your image's aspect ratio */
+    margin-bottom: 20px; /* Add margin below the image */
+  }
+  
+  .text {
+    background-color: black;
+    padding: 60px;
+    text-align: center;
+  }
+  
+  .text h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .text p {
+    color: #555;
+    font-size: medium;
+  }
+  
+  .picture {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+    gap: 40px;
+    flex-wrap: wrap; /* Make sure images wrap on smaller screens */
+  }
+  
+  .picture img {
+    width: 200px;
+    height: 50px;
+  }
+  
+  /* Media Queries */
+  
+  /* Extra small devices (mobile phones, 600px and down) */
+  @media only screen and (max-width: 599px) {
+    .container .pic {
+      width: 100%; /* Full-width image for small screens */
+      height: 300px; /* Adjust height for smaller screens */
+    }
+  
+    .text h1 {
+      font-size: 2rem; /* Reduce font size */
+    }
+  
+    .text p {
+      font-size: 14px; /* Smaller text for mobile */
+    }
+  
+    .picture img {
+      width: 150px; /* Make images smaller for small screens */
+      height: 40px;
+    }
+  }
+  
+  /* Small devices (tablets, 600px to 768px) */
+  @media only screen and (min-width: 600px) and (max-width: 767px) {
+    .container .pic {
+      width: 80%; /* Adjust image width */
+      height: 400px; /* Adjust height for small devices */
+    }
+  
+    .text h1 {
+      font-size: 2.5rem; /* Reduce font size for tablets */
+    }
+  
+    .text p {
+      font-size: 16px; /* Adjust text size for small tablets */
+    }
+  
+    .picture img {
+      width: 180px; /* Adjust image size for tablets */
+      height: 45px;
+    }
+  }
+  
+  /* Medium devices (larger tablets or small laptops, 768px to 1024px) */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container .pic {
+      width: 70%; /* Adjust image width for medium devices */
+      height: 500px; /* Adjust height for medium devices */
+    }
+  
+    .text h1 {
+      font-size: 2.8rem; /* Adjust font size for medium devices */
+    }
+  
+    .text p {
+      font-size: 18px; /* Adjust font size */
+    }
+  
+    .picture img {
+      width: 190px; /* Adjust image size for medium devices */
+      height: 48px;
+    }
+  }
+  
+  /* Large screens: No change (keeps the original styles) */
+  @media only screen and (min-width: 1024px) {
+    /* Styles for large screens */
+    .container .pic {
+      width: 50%; /* Original size for large screens */
+      height: 700px;
+    }
+  
+    .text h1 {
+      font-size: 3rem; /* Original font size for large screens */
+    }
+  
+    .text p {
+      font-size: medium; /* Original font size for large screens */
+    }
+  
+    .picture img {
+      width: 200px; /* Original image size for large screens */
+      height: 50px;
+    }
+  }
+  

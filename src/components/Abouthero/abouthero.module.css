@@ -1,0 +1,98 @@
+/* Hero Section Styling */
+.section {
+    position: relative;
+    background-image: url('/herobg.png'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+    overflow: hidden; /* Ensure no content spills outside */
+  }
+  
+  /* Black Overlay Styling */
+  .section::before {
+    content: ""; /* Creates the overlay */
+    position: absolute; /* Ensures it covers the entire section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black overlay with transparency */
+    z-index: 1; /* Keeps overlay below content */
+  }
+  
+  /* Content Wrapper */
+  .contentWrapper {
+    position: relative; /* Keeps content above the overlay */
+    z-index: 2; /* Higher z-index ensures content is above the overlay */
+    width: 100%;
+    max-width: 800px; /* Restrict content width */
+    padding: 20px;
+    color: white; /* Default text color is white */
+  }
+  
+  /* Main Div */
+  .maindiv {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .maindiv h1 {
+    font-size: 4rem;
+    color: white; /* Explicit white color */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    z-index: 2; /* Ensures text is above overlay */
+  }
+  
+  .maindiv p {
+    font-size: 1.1rem;
+    color: white; /* Explicit white color */
+    line-height: 1.5;
+    z-index: 2; /* Ensures text is above overlay */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .section {
+      padding: 0 15px;
+    }
+  
+    .contentWrapper {
+      width: 90%;
+    }
+  
+    .maindiv h1 {
+      font-size: 2rem;
+    }
+  
+    .maindiv p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section {
+      padding: 0 10px;
+    }
+  
+    .contentWrapper {
+      width: 100%;
+    }
+  
+    .maindiv h1 {
+      font-size: 1.8rem;
+    }
+  
+    .maindiv p {
+      font-size: 0.9rem;
+    }
+  }
+  
